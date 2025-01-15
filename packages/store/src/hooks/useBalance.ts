@@ -1,8 +1,7 @@
-import { useRecoilValue } from "recoil";
+import { useAtomValue } from "jotai";
 import { balanceAtom } from "../atoms/balance";
 
 export const useBalance = () => {
-  const balance = useRecoilValue(balanceAtom);
-
+  const balance = useAtomValue(balanceAtom);
   return balance;
 };

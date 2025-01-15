@@ -1,10 +1,6 @@
-// app/providers.tsx
 "use client";
-import dynamic from "next/dynamic";
-import { RecoilRoot } from "recoil";
+import { Provider } from "jotai";
 
-const RecoilRootWrapper = ({ children }: { children: React.ReactNode }) => <RecoilRoot>{children}</RecoilRoot>;
-
-export const Providers = dynamic(() => Promise.resolve(RecoilRootWrapper), {
-  ssr: false,
-});
+export const Providers = ({ children }: { children: React.ReactNode }) => {
+  return <Provider>{children}</Provider>;
+};
