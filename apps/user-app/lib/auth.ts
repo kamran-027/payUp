@@ -28,7 +28,7 @@ export const authOptions = {
             return {
               id: existingUser.id.toString(),
               name: existingUser.name,
-              email: existingUser.number,
+              number: existingUser.number,
             };
           }
           return null;
@@ -55,5 +55,5 @@ export const authOptions = {
       },
     }),
   ],
-  secret: "mySecret",
+  secret: process.env.JWT_SECRET || "mySecret",
 };

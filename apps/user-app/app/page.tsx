@@ -1,12 +1,12 @@
 "use client";
 import { useBalance } from "@repo/store/useBalance";
+import { Appbar } from "@repo/ui/appbar";
 
 export default function Home() {
-  const balance = useBalance();
+  // const balance = useBalance();
   return (
-    <div className="text-2xl text-red-600">
-      Hi There
-      <div>Balance: {balance}</div>
+    <div>
+      <Appbar user={{ name: "Kamran" }} OnSignIn={() => {}} OnSignOut={() => {}} />
     </div>
   );
 }
